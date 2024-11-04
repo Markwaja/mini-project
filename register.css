@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(./images/b1.png);
+}
 nav .logo a img{
     width: 200px;
 }

@@ -95,6 +95,10 @@ button, .register-btn, .start-now, .read-more, .arrow-btn{
     line-height: 1.2;
     word-wrap: break-word;
 }
+.card-content p{
+    font-weight: 1000;
+    font-style:oblique;
+}
 .buttons{
     display: flex;
     gap: 15px;
