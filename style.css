@@ -95,6 +95,9 @@ button, .register-btn, .start-now, .read-more, .arrow-btn{
     line-height: 1.2;
     word-wrap: break-word;
 }
+.card-content span{
+    color: green;
+}
 .card-content p{
     font-weight: 1000;
     font-style:oblique;

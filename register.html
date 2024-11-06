@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mini project</title>
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/react-toastify/dist/ReactToastify.css" />
+
 </head>
 <body>
     <header>
@@ -15,6 +17,7 @@
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
                 <li><a href="#">Contct me</a></li>
             </ul>
             <div class="cta">
@@ -33,12 +36,12 @@
                 <div class="modal">
                     <span class="close" onclick="closeLoginModal()">&times;</span>
                     <h2>Login</h2>
-                    <form>
-                        <label for="username">UserName:</label>
-                        <input type="text" id="username" name="username">
+                    <form id="loginForm">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
                         <label for="password">password:</label>
                         <input type="password" id="password" name="password">
-                        <button type="submit">Login</button>
+                        <button class="login-btn" type="submit"><span id="loader" class="loader"></span>  Login</button>
                     </form>
                     
                         <p><input type="checkbox">Remember me</p>
@@ -49,21 +52,23 @@
                         <a href="#" class="modal-link" id="register-link" onclick="openRegisterModal()">Register here</a>
                     </p>
                 </div>
-
             </div>
             <div class="modal-container" id="register-modal">
                 <div class="modal">
                     <span class="close" onclick="closeRegisternModal()" >&times;</span>
                     <h2>Register</h2>
-                    <form>
+                    <form id="registerForm">
                         <label for="username">UserName:</label>
-                        <input type="text" id="username" name="username">
+                        <input type="text" id="username" name="username" required>
+                        
                         <label for="email">Email:</label>
-                        <input type="text" id="email" name="email">
-                        <label for="password">password:</label>
-                        <input type="password" id="password" name="password">
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        
                         <button type="submit">Register</button>
-                    </form>
+                      </form>
                     
                        
                        

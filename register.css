@@ -3,12 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: url(./images/b1.png);
-}
 nav .logo a img{
     width: 200px;
 }
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -123,6 +121,9 @@ nav .cta button:hover{
     display: inline-block;
     padding: 10px 20px;
     border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
@@ -134,7 +135,7 @@ nav .cta button:hover{
     transition: all 0.3s ease-in-out;
 }
 .modal form button[type="submit"]:hover{
-    background-color: #6d6d6d;
+    /* background-color: #6d6d6d; */
     box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
     transform: translate(2px, 2px);  
 }   
@@ -188,3 +189,23 @@ nav .cta button:hover{
 
     }
 }
+
+.loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid gray;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
