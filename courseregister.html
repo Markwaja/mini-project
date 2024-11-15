@@ -12,7 +12,10 @@
       <div class="modal-container" id="login-modal">
         <div class="modal">
           <h2>Courese Registration</h2>
-          <form>
+          <form
+            id="registerCourseForm"
+            onsubmit="handleSubmitRegisterCourse(event)"
+          >
             <label for="username">UserName:</label>
             <input
               type="text"
@@ -29,23 +32,24 @@
               placeholder="Enter your email"
             />
             <label for="session">Session:</label>
-            <select name="session" id="time">
-              <option value="" disabled selected></option>
-              <option value="">Morning</option>
-              <option value="">Afternoon</option>
+            <select name="session" id="time" required>
+              <option value="" disabled selected>Select Session</option>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
             </select>
             <label for="program">Select Program:</label>
             <select id="program" name="program" required>
-              <option value="" disabled selected></option>
-              <option value="">Basic Comuputing</option>
-              <option value="">Cyber Security</option>
-              <option value="">Web Development</option>
-              <option value=""><h2>Data Analysis</h2></option>
+              <option value="" disabled selected>Select Program</option>
+              <option value="Basic Computing">Basic Computing</option>
+              <option value="Cyber Security">Cyber Security</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Data Analysis">Data Analysis</option>
             </select>
+            <button type="submit">REGISTER</button>
           </form>
-          <button type="submit">REGISTER</button>
         </div>
       </div>
     </section>
+    <script src="registerCourse.js" defer></script>
   </body>
 </html>
