@@ -1,35 +1,35 @@
 const cardEl = document.getElementById("card");
-window.onload = function () {
-  var loginModal = document.getElementById("login-modal");
-  var registerModal = document.getElementById("register-modal");
+// window.onload = function () {
+//   var loginModal = document.getElementById("login-modal");
+//   var registerModal = document.getElementById("register-modal");
 
-  loginModal.style.display = "none";
-  registerModal.style.display = "none";
-};
+//   loginModal.style.display = "none";
+//   registerModal.style.display = "none";
+// };
 
-function openLoginModal() {
-  var loginModal = document.getElementById("login-modal");
-  var registerModal = document.getElementById("register-modal");
+// function openLoginModal() {
+//   var loginModal = document.getElementById("login-modal");
+//   var registerModal = document.getElementById("register-modal");
 
-  loginModal.style.display = "block";
-  registerModal.style.display = "none";
-}
-function closeLoginModal() {
-  var loginModal = document.getElementById("login-modal");
-  loginModal.style.display = "none";
-}
+//   loginModal.style.display = "block";
+//   registerModal.style.display = "none";
+// }
+// function closeLoginModal() {
+//   var loginModal = document.getElementById("login-modal");
+//   loginModal.style.display = "none";
+// }
 
-function openRegisterModal() {
-  var registerModal = document.getElementById("register-modal");
-  var loginModal = document.getElementById("login-modal");
+// function openRegisterModal() {
+//   var registerModal = document.getElementById("register-modal");
+//   var loginModal = document.getElementById("login-modal");
 
-  registerModal.style.display = "block";
-  loginModal.style.display = "none";
-}
-function closeRegisternModal() {
-  var registernModal = document.getElementById("register-modal");
-  registernModal.style.display = "none";
-}
+//   registerModal.style.display = "block";
+//   loginModal.style.display = "none";
+// }
+// function closeRegisternModal() {
+//   var registernModal = document.getElementById("register-modal");
+//   registernModal.style.display = "none";
+// }
 
 window.onload = function () {
   const loginModal = document.getElementById("login-modal");
@@ -111,7 +111,7 @@ const handleSubmitLogin = async (e) => {
     }
   } catch (error) {
     console.log("Error:", error);
-    alert("An error occurred.Please try again later.");
+    alert("An error occurred.Please try again sometime.");
   }
 };
  document.getElementById("logout").addEventListener("click",function (){
