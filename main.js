@@ -78,6 +78,7 @@ const handleSubmitLogin = async (e) => {
   const data = Object.fromEntries(formData);
   try {
     // Send POST request to the login endpoint
+
     const response = await fetch(
       "https://afritechbackend.onrender.com/api/auth/login",
       {
@@ -88,6 +89,15 @@ const handleSubmitLogin = async (e) => {
         body: JSON.stringify(data),
       }
     );
+    const response = await fetch("https://afritechbackend.onrender.com/api/auth/login", {
+
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
     //HANDLE RESPONSE
     const result = await response.json();
     localStorage.setItem("user", JSON.stringify(result.user));
@@ -118,6 +128,7 @@ const handleSubmitRegister = async (e) => {
   const data = Object.fromEntries(formData);
   try {
     // Send POST request to the register endpoint
+
     const response = await fetch(
       "https://afritechbackend.onrender.com/api/auth/register",
       {
@@ -128,6 +139,16 @@ const handleSubmitRegister = async (e) => {
         body: JSON.stringify(data),
       }
     );
+
+
+    const response = await fetch("https://afritechbackend.onrender.com/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
     //HANDLE RESPONSE
     const result = await response.json();
     if (response.ok) {
@@ -142,34 +163,4 @@ const handleSubmitRegister = async (e) => {
     alert("An error occurred. Please try again later.");
   }
 };
-//   const handleSubmitRegisterCourse = async (e) => {
-//   e.preventDefault();
-//   console.log("Form submitted!");
-//   const form = document.getElementById("registerCourseForm");
-//   const formData = new FormData(form);
-//   const data = Object.fromEntries(formData);
-//   try {
-//     // Send POST request to the register course endpoint
-//     const response = await fetch("http://localhost:5001/api/courseRegisteration/registerCourse/", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(data),
-//     });
-//     //HANDLE RESPONSE
-//     const result = await response.json();
-//     if (response.ok) {
-//       console.log("Registration successful");
-//       alert(result.message);
-//       // form.reset();
-//       // closeLoginModal();
-//       // window.location.href = "index.html";
-//     } else {
-//       alert(`Error: ${result.message}`);
-//     }
-//   } catch (error) {
-//     console.log("Error:", error);
-//     alert("An error occurred. Please try again later.");
-//   }
-// };
+

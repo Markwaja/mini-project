@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="register.css" />
     <link rel="stylesheet" href="courseregister.css" />
+
     <script src="registerCourse.js" defer></script>
+
   </head>
   <body>
     <section class="hero">
@@ -18,15 +20,35 @@
             onsubmit="handleSubmitRegisterCourse(event)"
           >
             <label for="username">UserName:</label>
+
             <input type="text" id="username" name="username" required />
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" required />
+
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your name"
+            />
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+
             <label for="session">Session:</label>
             <select name="session" id="time" required>
               <option value="" disabled selected>Select Session</option>
               <option value="Morning">Morning</option>
               <option value="Afternoon">Afternoon</option>
             </select>
+
+
+            <label for="program">Select Program:</label>
 
             <select id="program" name="program" required>
               <option value="" disabled selected>Select Program</option>
@@ -40,5 +62,7 @@
         </div>
       </div>
     </section>
+
+    <script src="registerCourse.js" defer></script>
   </body>
 </html>
