@@ -1,152 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mini project</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="hero-section">
-        <div class="navbar flex-container">
-            <div class="logo">AfriTech Hub</div>
-            <div class="hamburger">=</div>
-            <div class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="courseregister.html" class="register-btn">Register</a></li>
-            </div>
-        </div>
-        <div class="card shadow-heavy">
-            <div class="card-content">
+    <link rel="stylesheet" href="register.css" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/react-toastify/dist/ReactToastify.css"
+    />
 
-                <h1>Welcome To AfriTech Hub   <span class="username" id="username"></span></h1>
-               
-                <div class="buttons">
-                    <button  class="start-now">Start Now</button>
-                    <a href="about.html"><button class="read-more">read-more</button></a>
-                </div>
-            </div>
-            <div class="card-image">
-                <img src="./images/b1.png" alt="AfriTech logo">
-            </div>
+    <style>
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 500px;
+      }
+      .card h1{
+        font-size: 50px;
+      }
+      .card img{
+        width: 350px;
+        object-fit: cover;
+      }
+      .innovation{
+        color: #F3C623;
+      }
+      .creativity{
+      color: #347928;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href=""><img src="./images/b1.png" alt="AfriTech Hub logo" /></a>
         </div>
-        
-        <div class="suggested-courses">
-            <div class="suggested-header flex-container">
-                <h2>Offered Courses</h2>
-                <div class="arrows">
-                    <button class="arrow-btn">&#8592:</button>
-                    <button class="arrow-btn">&#8594:</button>
-                </div>
-            </div>
-            <a href="basiccomputing.html"> <div class="course-cards">
-                <div class="course-card gradient-1">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Basic Comuputing</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-            </a>   
-               <a href="cyber.html"><div class="course-card gradient-2">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Cyber Security</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-               </a>
-                <a href="web.html"><div class="course-card gradient-3">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Web Development</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-                </a>
-                <a href="dataana.html"><div class="course-card gradient-4">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Data Analysis</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-                </a>
-                <div class="course-card gradient-3">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Web Development</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-                <div class="course-card gradient-4">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Data Analysis</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-                <div class="course-card gradient-1">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Basic Comuputing</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-                <div class="course-card gradient-2">
-                    <div class="Course-info flex-container">
-                        <div class="course-details">
-                            <p class="course-name">Cyber Security</p>
-                            <p class="course-category">Morning and Afternoon</p>
-                        </div>
-                        <div class="course-price">¢250</div>
-                    </div>
-                </div>
-            </div>
+       
+        <div class="cta">
+          <button
+           
+            id="login-btn"
+            class="btn-login"
+            onclick="openLoginModal()"
+          >
+            Login
+          </button>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>AfriTech Hub</h4>
-                        <ul>
-                            <li><a href="">About Us</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4> Follow us</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+        <div class="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="modal-container" id="login-modal">
+          <div class="modal">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="handleSubmitLogin(event)">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+              <label for="password">password:</label>
+              <input type="password" id="password" name="password" />
+              <button class="login-btn" type="submit">
+                <span id="loader" class="loader"></span> Login
+              </button>
+            </form>
+
+            <p><input type="checkbox" />Remember me</p>
+            <a href="#">Forgot password</a>
+
+            <p>
+              Don't have an account?
+              <a
+                href="#"
+                class="modal-link"
+                id="register-link"
+                onclick="openRegisterModal()"
+                >Register here</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="modal-container" id="register-modal">
+          <div class="modal">
+            <span class="close" onclick="closeRegisternModal()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm" onsubmit="handleSubmitRegister(event)">
+              <label for="username">UserName:</label>
+              <input type="text" id="username" name="username" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+
+              <button type="submit">Register</button>
+            </form>
+
+            <p>
+              Already have an account?
+              <a
+                href="#"
+                class="modal-link"
+                id="register-link"
+                onclick="openLoginModal()"
+                >Login here</a
+              >
+            </p>
+          </div>
+        </div>
+        <div id="card" class="card shadow-heavy">
+          <h1>
+            Welcome To AfriTech Hub <span class="username" id="username"></span>
+          </h1>
+             <h3>Place of  <span class="innovation">innovation</span>  & <span class="creativity">creativity</span></h3>
+          <div class="card-image">
+            <img src="./images/b1.png" alt="AfriTech logo" />
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
