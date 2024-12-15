@@ -101,7 +101,7 @@ const handleSubmitLogin = async (e) => {
     }
   } catch (error) {
     console.log("Error:", error);
-    alert("An error occurred. Please try again later.");
+    alert("An error occurred.Please try again later.");
   }
 };
  document.getElementById("logout").addEventListener("click",function (){
