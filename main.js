@@ -69,7 +69,8 @@ const handleSubmitLogin = async (e) => {
   const data = Object.fromEntries(formData);
   try {
     // Send POST request to the login endpoint
-    const response = await fetch("http://localhost:5001/api/auth/login", {
+    const response = await fetch("https://afritechbackend.onrender.com/api/auth/login", {
+
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -100,7 +101,8 @@ const handleSubmitRegister = async (e) => {
   const data = Object.fromEntries(formData);
   try {
     // Send POST request to the register endpoint
-    const response = await fetch("http://localhost:5001/api/auth/register", {
+
+    const response = await fetch("https://afritechbackend.onrender.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -121,3 +123,4 @@ const handleSubmitRegister = async (e) => {
     alert("An error occurred. Please try again later.");
   }
 };
+
